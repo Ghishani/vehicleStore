@@ -10,6 +10,31 @@ public class Runner {
         jazz.setEngine(electricEngine);
 
         System.out.println(jazz.getHorsePower());
+
+
+
+
+        IEngine jaguarEngine = new CombustionEngine(99, "01/01/2023");
+        IWaterVehicle displacementHull = new Hull("Displacement");
+        CargoShip titanic = new CargoShip(10_000.0f, 20, 500, displacementHull, jaguarEngine);
+
+        System.out.println(titanic.getHullType());
+
+
+
+
+
+
+        IEngine boeingEngine = new CombustionEngine(150, "01/01/2023");
+        IWaterVehicle fiberglassHull = new Hull("Fiberglass");
+        Speedboat mcqueen = new Speedboat(500_000.0f, 1000, true, boeingEngine, fiberglassHull);
+
+        System.out.println(mcqueen.getHullType());
+
+
+
+
     }
+
 
 }
